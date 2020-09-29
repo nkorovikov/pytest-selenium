@@ -6,7 +6,6 @@ import time
 class TestClass:
 
     def test_visit_site(self):
-        time.sleep(3)
         driver = webdriver.Remote(
             command_executor='http://selenium:4444/wd/hub',
             desired_capabilities=DesiredCapabilities.FIREFOX)

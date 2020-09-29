@@ -7,6 +7,8 @@ services:
       - 4444:4444
   test:
     build: .
-    command: pytest TestClass.py
+    depends_on:
+      - "selenium"
+    command: sh -c 'sleep 3 && pytest'
     volumes:
       - .:/code
